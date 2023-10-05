@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+<!--    <a class="navbar-brand" href="#">INDIA BANK APPLICATION FORM</a>-->
+      <body style="background-color:orange">
+<h1 STYLE="background-color:BLUE;"> INDIA BANK APPLICATION FORM </h1>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+                <h3><a class="nav-link" href="{% url 'logout' %}">Click here to logout</a></h3>
+            </li>
+
+      </ul>
+    </div>
+      </div>
+  </nav>
+</nav>
+
+<BR>
+<form action="newform" method="post">
+    {% csrf_token %}
+
+    <h3><b><label for="validationDefault01" > Name: </label></b></h3>
+    <input type="text" id="validationDefault01" name="Name" placeholder="Enter your name" required><br>
+
+     <h3><b><label for="validationDefault02" > DOB: </label></b></h3>
+     <input type="date" id="validationDefault02" name="Date of Birth" placeholder="Enter your DOB" required><br>
+
+    <h3><b><label for="validationDefault03" > Age: </label></b></h3>
+    <input type="number" id="validationDefault03" name="Age" placeholder="Enter your Age" required><br>
+
+    <h3><b>Gender:</b></h3>
+    <div class="form-check-inline">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Male
+        <label class="form-check-label" for="radio1"></label>
+        </div>
+    <div class="form-check-inline">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Female
+        <label class="form-check-label" for="radio2"></label>
+    </div>
+    <br>
+
+    <h3><b><label for="validationDefault04" > Phone Number: </label></b></h3>
+    <input type="number"  id="validationDefault04" name="PhoneNumber" placeholder="Enter your Phone number" required><br>
+
+    <h3><b><label for="validationDefault05" > Email ID: </label></b></h3>
+    <input type="text"  id="validationDefault05" name="Emailid" placeholder="Enter your Email-Id" required><br>
+
+    <h3><b><label for="validationDefault06" > Address: </label></b></h3>
+    <input type="text" id="validationDefault06" name="Address" placeholder="Enter your Address" required><br>
+
+     <h3><b> Districts:</b></h3>
+     <div class="dropdown">
+         <button class="btn btn-default dropdown-toggle"  type="button" data-toggle="dropdown"> Select your sub-area
+             <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#"> Alappuzha <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                            <li><a tabindex="-1" href="#">Ambalapuzhha</a></li>
+                            <li><a tabindex="-1" href="#">Kuttanad</a></li>
+                            <li><a tabindex="-1" href="#">Chengannur</a></li>
+                            <li><a tabindex="-1" href="#">Mavelikara</a></li>
+                            <li><a tabindex="-1" href="#">Cherthala</a></li>
+                    </ul>
+            </li>
+            <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#"> Ernakulam <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Paravur</a></li>
+                        <li><a tabindex="-1" href="#">Aluva</a></li>
+                        <li><a tabindex="-1" href="#">Kochi</a></li>
+                        <li><a tabindex="-1" href="#">Muvattupuzha</a></li>
+                        <li><a tabindex="-1" href="#">Kothamangalam</a></li>
+                    </ul>
+            </li>
+             <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#"> Palakkad <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Alathur</a></li>
+                        <li><a tabindex="-1" href="#">Chittur</a></li>
+                        <li><a tabindex="-1" href="#">Mannarkad</a></li>
+                        <li><a tabindex="-1" href="#">Ottapalam</a></li>
+                        <li><a tabindex="-1" href="#">Pattambi</a></li>
+                    </ul>
+            </li>
+            <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#"> Thiruvanathapuram <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Nedumangadu</a></li>
+                        <li><a tabindex="-1" href="#">Chiriyinkeezhu</a></li>
+                        <li><a tabindex="-1" href="#">Kattakada</a></li>
+                        <li><a tabindex="-1" href="#">Neyyatinkara</a></li>
+                        <li><a tabindex="-1" href="#">Varkala</a></li>
+                    </ul>
+            </li>
+            <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#"> Thrissur <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Chalakkudy</a></li>
+                        <li><a tabindex="-1" href="#">Chavakkadu</a></li>
+                        <li><a tabindex="-1" href="#">Kodungallur</a></li>
+                        <li><a tabindex="-1" href="#">Kunnamkulam</a></li>
+                        <li><a tabindex="-1" href="#">Talapilly</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </div>
+<h3><b>Account Type:</b></h3><div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"> Select Account Type
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+ <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#"> Please select from below<span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-submenu">
+          <li><a tabindex="-1" href="#">Savings Account</a></li>
+          <li><a tabindex="-1" href="#">Current Account</a></li>
+            <li><a tabindex="-1" href="#">NRI Account</a></li>
+            <li><a tabindex="-1" href="#">Salary Account</a></li>
+        </ul>
+ </li>
+        </ul>
+</div>
+    <h3><b>Materials Needed :</b>  </h3><div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Passbook
+  </label>
+</div>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Cheque Book
+  </label>
+</div>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Credit Card
+  </label>
+</div>
+    <div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Debit Card
+  </label>
+</div>
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+    $(".dropdown-menu li a").click(function(){
+  var selText = $(this).text();
+  $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+});
+
+</script>
+
+
+
+
+
+    <br>
+    <br>
+
+
+       <button class="btn btn-dark" type="submit">Click here to check missing out fields</button><br>
+    <br>
+
+
+    <h3>If fields are filled, Click below to Submit the Form</h3>
+  <h3><input type="button" id="btnShowMsg" value="SUBMIT" onClick="showMessage()" /> </h3>
+   <script type="text/javascript">
+            function showMessage() {
+               alert("Your Application Form has been accepted");
+            }
+       </script>
+
+
+
+
+    </form>
+
+</body>
+</html>

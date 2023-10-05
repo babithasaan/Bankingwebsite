@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:WHITE">
+<h1 style="background-color:#483d8b;"> India Bank </h1>
+<h2 STYLE="background-color:orange;"> USER REGISTRATION FORM </h2>
+<form action="register" method="post">
+    {% csrf_token %}
+    USERNAME:  <input type="text" name="Username" placeholder="Enter your name"><br>
+    <BR>
+    PASSWORD:  <input type="password" name="Password" placeholder="Create your password"><br>
+    <BR>
+    CPASSWORD: <input type="password" name="ConfirmPassword" placeholder="Confirm your password"><br>
+    <BR>
+    <input type="submit">
+
+</form>
+{% for msg in messages %}
+<h1>{{msg}}</h1>
+{% endfor %}
+</body>
+</html>
